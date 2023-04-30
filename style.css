@@ -1,0 +1,96 @@
+@font-face {
+  font-family: avenir-light;
+  src: url('fonts/Avenir-Light.ttf');
+}
+
+@font-face {
+  font-family: avenir-black;
+  src: url('fonts/Avenir-Black.ttf');
+}
+
+body {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  color: #002700;
+  background: #c9c9c9;
+  font-family: avenir-light, Arial, Helvetica, sans-serif;
+}
+
+.titleBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 20px 10px 20px;
+  /* border: 5px solid black; */
+}
+
+.titleBar > div {
+  /* background-color: #f1f1f1; */
+  justify-content: left;
+  width: max-content;
+  padding: 10px;
+  margin: 1px;
+  flex-basis: 1;
+  flex-grow: 1;
+}
+
+.titleGroup {
+  flex-direction: column;
+  flex-basis: 2;
+  justify-content: left;
+  text-align: left;
+  padding: 0px 0px 0px 0px;
+}
+
+.titleGroup > div {
+  justify-content: left;
+  text-align: left;
+}
+
+.band {
+  text-align: left;
+}
+
+.band > b {
+  font-size: 18px;
+}
+
+.address {
+  text-align: right;
+}
+
+.address>b {
+  font-size: 20.5px;
+}
+
+.address>i {
+  font-size: 13.5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 0px;
+}
+
+.container > div {
+  text-align: center;
+}
+
+
+.title {
+  font-size: 35px;
+  /* width: 300px; */
+  padding: 0px;
+  margin: 0px;
+  height: fit-content;
+  border: 0px solid #002700;
+}
+
+.bandimage {
+  height: 300px;
+  content: url("images/jazz.jpg");
+  object-fit: cover;
+
+}
