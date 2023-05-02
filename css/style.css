@@ -76,7 +76,7 @@ body {
 
 .container > div {
   text-align: center;
-}
+} 
 
 
 .title {
@@ -90,7 +90,6 @@ body {
 
 .bandimage {
   height: 300px;
-  content: url("images/jazz.jpg");
+  content: url("../images/jazz.jpg");
   object-fit: cover;
-
 }
