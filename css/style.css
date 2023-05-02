@@ -89,7 +89,7 @@ body {
 }
 
 .bandimage {
-  height: 300px;
-  content: url("../images/jazz.jpg");
+  height: 550px;
+  content: url("../images/esrk3.jpg");
   object-fit: cover;
 }
