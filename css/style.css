@@ -9,7 +9,7 @@
 }
 
 body {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 50px 0px;
   padding: 20px 0px 0px 0px;
   color: #002700;
   background: #c9c9c9;
@@ -89,7 +89,19 @@ body {
 }
 
 .bandimage {
-  height: 550px;
+  height: 320px;
   content: url("../images/esrk3.jpg");
   object-fit: cover;
+}
+
+.upcomingShows {
+  font-size: 24px;
+  padding: 50px 0px 0px 0px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px 20px 50px;
+  border: #002700;
 }
