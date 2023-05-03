@@ -14,12 +14,6 @@ request.open('GET', url, true)
 request.send()
 let requestCounter = 10
 
-function handleLoad(json) {
-  json.values.shift()
-  console.log(json)
-  // updatePage(json.values)
-}
-
 request.onload = function () {
   if (this.readyState === 4 && this.status === 200) {
     var googleSheetsJSON = JSON.parse(this.responseText)
@@ -34,4 +28,44 @@ request.onload = function () {
       console.log('Connection Failed')
     }
   }
+}
+
+function handleLoad(json) {
+  json.values.shift()
+  console.log(json)
+  updatePage(json.values)
+}
+
+function updatePage(jsonEvents) {
+  const allEvents = []
+  const latestItems = document.getElementById('latest')
+  latestItems.textContent = ''
+
+  jsonEvents.forEach((event) => {
+    const EventObject = convertToEventObject(event)
+    allEvents.push(EventObject)
+  })
+
+  console.log('Event Object: ', EventObject)
+
+  // FILL INDEX.HTML WITH LATEST ARRAY IN DOM
+  // const highlightedShows = allEvents.filter((show) => {
+  //   return show['highlight'] !== ''
+  // })
+  // const highlightedShowsLimited = highlightedShows.slice(0, 3)
+
+  // highlightedShowsLimited.forEach((show) => {
+  //   const showCard = createShowCard(show)
+  //   latestItems.appendChild(showCard)
+  // })
+}
+
+function convertToEventObject(event) {
+  const EventObject = {}
+  EventObject['date'] = event[0]
+  EventObject['time'] = event[1]
+  EventObject['name'] = event[2]
+  EventObject['description'] = event[3]
+  EventObject['performer'] = event[4]
+  return EventObject
 }
