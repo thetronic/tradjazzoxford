@@ -10,7 +10,7 @@ var url =
   apiKey
 
 const request = new XMLHttpRequest()
-request.open('GET', requestURL, true)
+request.open('GET', url, true)
 request.send()
 let requestCounter = 10
 
